@@ -3,8 +3,10 @@ var div = document.querySelector("div");
 
 allBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
-    var text = btn.innerHTML;
-    var color = text.replace("MAKE-", "").toLowerCase();
-    div.style.backgroundColor = color;
+    var btnColor = btn.classList[3];
+
+    var bgColor = btnColor.replace("btn", "bg");
+
+    div.classList.replace(div.classList[0], bgColor);
   });
 });
